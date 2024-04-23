@@ -72,6 +72,14 @@ def generate_frames_web(path_x):
 def home():
     session.clear()
     return render_template('indexproject.html')
+@app.route('/login', methods=['GET','POST'])
+def login():
+    session.clear()
+    return render_template('login.html')
+@app.route('/register', methods=['GET','POST'])
+def register():
+    session.clear()
+    return render_template('register.html')
 # Rendering the Webcam Rage
 #Now lets make a Webcam page for the application
 #Use 'app.route()' method, to render the Webcam page at "/webcam"
